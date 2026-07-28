@@ -1,0 +1,109 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.hiw {
+  @include section-padding;
+  background: $color-surface-container-low;
+
+  &__inner {
+    @include container;
+  }
+
+  &__title {
+    @include section-heading;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-8;
+
+    @include respond-below(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-6;
+    }
+
+    @include respond-below(sm) {
+      grid-template-columns: 1fr;
+      gap: $space-6;
+    }
+  }
+
+  &__step {
+    position: relative;
+    text-align: center;
+    padding: $space-8 $space-6;
+    background: $color-background;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: border-color $transition-base;
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__step-number {
+    position: absolute;
+    top: $space-4;
+    inset-inline-end: $space-4;
+    font-family: $font-family-display;
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    color: $color-surface-container-high;
+    line-height: 1;
+    user-select: none;
+  }
+
+  &__step-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: $radius-full;
+    background: $text-primary;
+    color: $color-white;
+    margin: 0 auto $space-5;
+  }
+
+  &__step-title {
+    font-family: $font-family-display;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $space-3;
+
+    @include respond-below(md) {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &__step-desc {
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    color: $text-secondary;
+
+    @include respond-below(md) {
+      font-size: $font-size-sm;
+    }
+  }
+
+  // Arrow connectors between steps (desktop only)
+  &__step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    inset-inline-end: -$space-4;
+    width: $space-8;
+    height: 2px;
+    background: $color-outline-variant;
+
+    @include respond-below(lg) {
+      display: none;
+    }
+  }
+}

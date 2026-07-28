@@ -1,0 +1,19 @@
+<section id="domains" class="domains khatam-bg">
+  <div class="domains__inner">
+    <h2 class="domains__title" appScrollReveal>{{ 'domains.title' | translate }}</h2>
+    <hr class="accent-divider" appScrollReveal>
+
+    <div class="domains__grid">
+      @for (domain of domains; track domain.key; let i = $index) {
+        <div class="domains__card" appScrollReveal [style.transition-delay]="(i * 0.05) + 's'">
+          <div class="domains__card-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path [attr.d]="domain.icon"/>
+            </svg>
+          </div>
+          <span class="domains__card-label">{{ 'domains.items.' + domain.key | translate }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

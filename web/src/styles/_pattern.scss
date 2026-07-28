@@ -1,0 +1,89 @@
+@use 'variables' as *;
+
+// ═══════════════════════════════════════════════════════════════
+// Islamic geometric pattern — 8-pointed star (khatam) via CSS
+// Used as subtle background texture / section dividers
+// ═══════════════════════════════════════════════════════════════
+
+// ── Repeating pattern background (low opacity) ───────────────
+.khatam-bg {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/images/khatam-pattern.svg');
+    background-repeat: repeat;
+    background-size: 120px 120px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// ── Dark section variant ─────────────────────────────────────
+.khatam-bg-dark {
+  &::before {
+    opacity: 0.05;
+  }
+}
+
+// ── Section divider ──────────────────────────────────────────
+.khatam-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-4;
+  padding: $space-8 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      $color-outline-variant,
+      transparent
+    );
+  }
+
+  .khatam-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.3;
+    flex-shrink: 0;
+    color: $text-primary;
+  }
+}
+
+// ── Decorative corner accents ────────────────────────────────
+.corner-accent {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '✦';
+    position: absolute;
+    color: $text-primary;
+    opacity: 0.15;
+    font-size: $font-size-lg;
+  }
+
+  &::before {
+    top: $space-4;
+    inset-inline-start: $space-4;
+  }
+
+  &::after {
+    bottom: $space-4;
+    inset-inline-end: $space-4;
+  }
+}

@@ -1,0 +1,287 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+}
+
+.header {
+  background: rgba($color-background, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: box-shadow $transition-base, background $transition-base;
+
+  &--scrolled {
+    box-shadow: $shadow-sm;
+    background: rgba($color-background, 0.98);
+  }
+
+  &__inner {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    gap: $space-4;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  &__brand {
+    font-family: $font-family-display;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    letter-spacing: -0.02em;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+
+    @include respond-below(lg) {
+      position: fixed;
+      top: 80px;
+      bottom: 0;
+      inset-inline: 0;
+      flex-direction: column;
+      background: $color-background;
+      padding: $space-6;
+      gap: $space-1;
+      transform: translateX(100%);
+      transition: transform $transition-base;
+      z-index: $z-header;
+
+      [dir="rtl"] & {
+        transform: translateX(-100%);
+      }
+
+      &--open {
+        transform: translateX(0);
+      }
+
+      [dir="rtl"] &--open {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    background: $color-surface-container;
+    border-radius: $radius-full;
+    padding: $space-1 $space-3;
+    margin-inline-start: $space-2;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    &__icon {
+      font-size: 18px;
+      color: $text-secondary;
+    }
+
+    &__input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-family: $font-family-body;
+      font-size: $font-size-sm;
+      color: $text-primary;
+      width: 130px;
+      transition: width $transition-fast;
+
+      &:focus {
+        width: 180px;
+      }
+
+      &::placeholder {
+        color: $text-secondary;
+      }
+    }
+  }
+
+  &__nav-link {
+    padding: $space-2 $space-4;
+    color: $text-secondary;
+    font-family: $font-family-body;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: color $transition-fast, border-color $transition-fast;
+    white-space: nowrap;
+
+    &:hover,
+    &:focus-visible {
+      color: $text-primary;
+    }
+
+    &--active {
+      color: $text-primary;
+      font-weight: $font-weight-bold;
+      border-bottom-color: $text-primary;
+    }
+
+    @include respond-below(lg) {
+      font-size: $font-size-lg;
+      padding: $space-3 $space-4;
+      width: 100%;
+      border-bottom: none;
+      border-inline-start: 3px solid transparent;
+      text-align: start;
+
+      &--active {
+        color: $text-primary;
+        font-weight: $font-weight-bold;
+        border-inline-start-color: $text-primary;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    flex-shrink: 0;
+  }
+
+  &__action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-full;
+    background: $color-surface-container;
+    color: $text-secondary;
+    transition: all $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-surface-container-high;
+      color: $text-primary;
+    }
+
+    .material-symbols-outlined {
+      font-size: 20px;
+    }
+  }
+
+  &__lang-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__lang-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-full;
+    background: $color-surface-container;
+    color: $text-secondary;
+    transition: all $transition-fast;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-surface-container-high;
+      color: $text-primary;
+    }
+  }
+
+  &__lang-icon {
+    font-size: 20px;
+  }
+
+  &__lang-dropdown {
+    position: absolute;
+    top: calc(100% + $space-2);
+    inset-inline-end: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    background: $color-background;
+    border-radius: $radius-lg;
+    padding: $space-2;
+    box-shadow: $shadow-lg;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    z-index: calc($z-header + 1);
+    min-width: 100px;
+  }
+
+  &__lang-btn {
+    padding: $space-2 $space-4;
+    color: $text-secondary;
+    font-family: $font-family-body;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    border-radius: $radius-md;
+    transition: all $transition-fast;
+    text-align: start;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-surface-container;
+      color: $text-primary;
+    }
+
+    &--active {
+      background: $text-primary;
+      color: $color-white;
+
+      &:hover {
+        background: $text-primary;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: $space-2;
+
+    @include respond-below(lg) {
+      display: flex;
+    }
+  }
+
+  &__hamburger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $text-primary;
+    border-radius: 2px;
+    transition: all $transition-fast;
+
+    &--open {
+      &:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AL-FITYA | Building the Next Generation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Be+Vietnam+Pro:wght@600;700;800&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .text-outline-thin {
+            -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+            color: transparent;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#1a1c1b",
+                    "outline-variant": "#cfc4c5",
+                    "on-surface-variant": "#4c4546",
+                    "error": "#ba1a1a",
+                    "outline": "#7e7576",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "tertiary": "#000000",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c7c5",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1b1b1b",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "surface-container": "#eeeeee",
+                    "tertiary-fixed": "#e2e3e1",
+                    "primary-fixed": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-background": "#1b1b1b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#656464",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#838483",
+                    "on-secondary-fixed-variant": "#474646",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#454746",
+                    "surface-tint": "#5e5e5e",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-low": "#f3f3f3",
+                    "background": "#f9f9f9",
+                    "secondary-fixed": "#e5e2e1",
+                    "secondary-container": "#e5e2e1",
+                    "secondary": "#5f5e5e",
+                    "inverse-primary": "#c6c6c6",
+                    "surface-dim": "#dadada",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-container": "#848484",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-primary-fixed-variant": "#474747",
+                    "inverse-surface": "#303030",
+                    "primary-container": "#1b1b1b",
+                    "on-primary-fixed": "#1b1b1b",
+                    "surface": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "stack-sm": "8px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "stack-lg": "24px",
+                    "section-gap": "128px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display-xl": ["Be Vietnam Pro"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "display-xl-mobile": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                    "display-xl": ["72px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                    "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                    "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                    "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                    "display-xl-mobile": ["40px", { "lineHeight": "48px", "fontWeight": "700" }]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-outline/10 h-20 transition-all ease-in-out duration-300">
+<div class="topbar-inner max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
+<div class="flex items-center gap-2">
+<span class="font-display-xl text-headline-md font-bold tracking-tighter text-primary">AL-FITYA</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md uppercase tracking-wider text-primary font-bold border-b-2 border-primary pb-1 transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-200" href="#">Mission</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-200" href="#">Activities</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-200" href="#">Events</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-secondary hover:text-primary transition-colors duration-200" href="#">News</a>
+<div class="sidebar-search-trigger flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-full border border-outline/10 cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[20px]">search</span>
+<input type="text" class="bg-transparent border-none outline-none text-sm text-primary w-28 focus:w-40 transition-all" placeholder="Search...">
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block border border-primary px-6 py-2 font-label-sm uppercase text-primary hover:bg-primary hover:text-on-primary transition-all duration-300">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-sm uppercase hover:bg-primary/90 transition-all duration-300">Download App</button>
+<span class="material-symbols-outlined text-primary cursor-pointer text-[28px]" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[800px] flex items-center overflow-hidden pt-20">
+<!-- Background Image with Shader Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center grayscale-[0.5] contrast-125" data-alt="A cinematic, wide-angle shot of a futuristic mosque with clean white architectural lines and intricate geometric patterns, integrated with glowing holographic light data streams. The lighting is early morning gold and blue, creating a high-contrast minimalist aesthetic. The atmosphere is serene and intellectually focused, with a polished marble floor reflecting the architectural details and digital elements." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVHIfUS8eoIeoqNr-0_yuTO9cVJpdl8uf5M2kTq8kagQVZj1vJWfW2mRUfpNXlzfSNnN5ID2LkTKIV-j6AlK17gk9GBnjRhARKk6OS3kAD30a6erUFME_XzkU-dzh8eRMjAAgJVafLytEz_v47fp4Vuan_0TQTPt7Z3e-kdqPTUN154UohY16o_PGsakZ72gvZZZ6l5JT2WP1CDcy3-UZZG_TAoeq-453w7gcX_Rkqs7kyXhv43tffKsRpFXB6TG0lt6hiNYJ6Vk2S')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-12 gap-gutter">
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 mb-stack-md">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="font-label-sm uppercase tracking-widest text-primary">Est. 2024 • Global Initiative</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary leading-none mb-stack-lg animate-fade-in">
+                        Building the Next Generation of Muslim Youth.
+                    </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl mb-12">
+                        An organization dedicated to bridging tradition and technology to empower the global Ummah through education, innovation, and faith.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 font-label-sm uppercase tracking-widest hover:scale-[1.02] transition-transform duration-300">
+                            Explore Our Mission
+                        </button>
+<button class="border border-outline px-10 py-5 font-label-sm uppercase tracking-widest hover:bg-surface-container-low transition-colors duration-300">
+                            Download Mobile App
+                        </button>
+</div>
+</div>
+</div>
+<!-- Bottom Stats Bar (Asymmetric) -->
+<div class="absolute bottom-0 right-0 w-full lg:w-3/4 glass-card py-10 px-margin-desktop hidden lg:block">
+<div class="flex justify-between items-center">
+<div class="flex flex-col">
+<span class="font-display-xl text-headline-lg text-primary">50k+</span>
+<span class="font-label-sm uppercase text-secondary">Global Students</span>
+</div>
+<div class="h-12 w-[1px] bg-outline/20"></div>
+<div class="flex flex-col">
+<span class="font-display-xl text-headline-lg text-primary">120+</span>
+<span class="font-label-sm uppercase text-secondary">Tech Projects</span>
+</div>
+<div class="h-12 w-[1px] bg-outline/20"></div>
+<div class="flex flex-col">
+<span class="font-display-xl text-headline-lg text-primary">12</span>
+<span class="font-label-sm uppercase text-secondary">Global Hubs</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About & Mission Section -->
+<section class="py-section-gap bg-background">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center">
+<div class="space-y-stack-lg">
+<span class="font-label-sm uppercase text-primary tracking-[0.2em]">Our Heritage & Vision</span>
+<h2 class="font-display-xl text-headline-lg text-primary leading-tight">Bridging Centuries of Wisdom with Tomorrow's Tech.</h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                            AL-FITYA was born from a realization: the values that once powered the Golden Age of Islam are the same keys needed to unlock the potential of the digital era. We provide a space where traditional Islamic ethics meet modern technological proficiency.
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-lg pt-stack-md">
+<div class="p-stack-lg bg-surface-container-low border border-outline/5">
+<span class="material-symbols-outlined text-primary text-3xl mb-stack-sm" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-headline-md text-body-lg font-bold mb-2">The Vision</h4>
+<p class="font-body-md text-secondary text-sm">To see a generation of tech-savvy leaders grounded in prophetic character.</p>
+</div>
+<div class="p-stack-lg bg-surface-container-low border border-outline/5">
+<span class="material-symbols-outlined text-primary text-3xl mb-stack-sm" data-icon="rocket_launch">rocket_launch</span>
+<h4 class="font-headline-md text-body-lg font-bold mb-2">The Mission</h4>
+<p class="font-body-md text-secondary text-sm">Equipping youth with resources to solve global challenges through faith.</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-8 -left-8 w-64 h-64 border-l-2 border-t-2 border-primary/20 z-0 transition-all duration-500 group-hover:-top-4 group-hover:-left-4"></div>
+<div class="relative z-10 overflow-hidden bg-surface-container-highest aspect-[4/5]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-quality editorial photograph of a diverse group of young Muslim professionals and students in a modern collaborative workspace. They are gathered around a sleek wooden table with laptops and tablet devices, engaged in a vibrant discussion. The setting is bright and airy with large windows, minimalist white walls, and touches of green indoor plants, conveying a mood of focused energy and community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaPJi3e3dyILTgk-mTSKhPxtfwjEbbMudegg6mrE15YunXayEF3MSOckSa3bxend4kXRelyN06g23A0_aqaHKaxLEkhOHLVqY0pqpjODOcSFaCn8O7XsghU7HGi7APw06tRQkkH_mbkj-xS90bUoHo4EIPND-evC6X_nEoV9NeKkyyq1Tp4-y4eDjIcAJYGMAazRixdm9CvIr2IbgPCmTssK5LTSlqL10PjJcIaoJ6iY7GuJZnyCjS1v4LfVB3cNAJZQYdBG12nTnk"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-32 h-32 bg-primary flex items-center justify-center p-6 text-on-primary font-display-xl text-headline-md text-center z-20">
+                            Since 2012
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose AL-FITYA - Bento Grid -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-xl text-headline-lg text-primary mb-4">Why Choose AL-FITYA</h2>
+<p class="font-body-md text-secondary max-w-2xl mx-auto">We combine spiritual grounding with high-level technical training to create a holistic development ecosystem.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-background p-10 border border-outline/5 hover:border-primary/20 transition-all duration-300 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/5 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-4">Tradition Meets Innovation</h3>
+<p class="font-body-md text-secondary flex-grow">Our curriculum is reviewed by scholars and tech leads to ensure perfect alignment between Islamic law and modern best practices.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-background p-10 border border-outline/5 hover:border-primary/20 transition-all duration-300 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/5 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-4">Global Network</h3>
+<p class="font-body-md text-secondary flex-grow">Connect with a worldwide fraternity of developers, entrepreneurs, and thinkers who share your values and drive.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-background p-10 border border-outline/5 hover:border-primary/20 transition-all duration-300 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary/5 flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="biotech">biotech</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-4">Hands-on Experience</h3>
+<p class="font-body-md text-secondary flex-grow">Work on real-world projects that benefit the Ummah, from charitable dApps to educational platforms and AI tools.</p>
+</div>
+</div>
+<!-- Secondary Visual Row -->
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="A minimalist architectural shot of a modern Islamic library or research center. The design features tall vertical windows, smooth concrete surfaces, and light-colored wooden bookshelves. Soft morning light creates rhythmic shadows on the floor. The style is contemporary, clean, and highly organized, reflecting a professional NGO brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbVYsnTUmMZt5H67P7NpFqz-xCTI-pcft2nab6RJndupXehL6LEc532hFF3cYkBOBce5xnrJvSbVZd4kacR7092aAhb_vRkSJ67VOHubvZyBsNX-8gw-yCYhjw6NQo0Ok9_hon0pYg8LgdCxNIygUiJk3B69SWHP3XEA5_0RfKjWnflm75RNOevK23URsD2vUPV96f-9mFXe7KwritvxGRCqrv7lu07hfNecJwprfrr2iSuxUNRmmvoUZ1_sskOMZPokp_Q1jua2xn"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="bg-primary text-on-primary p-12 flex items-center">
+<div class="space-y-6">
+<h3 class="font-display-xl text-headline-md">Ready to start your journey?</h3>
+<p class="font-body-md text-on-primary/80">Join thousands of others in redefining what it means to be a modern Muslim professional.</p>
+<button class="bg-on-primary text-primary px-8 py-4 font-label-sm uppercase tracking-widest hover:bg-surface-container-high transition-all">Join the Community</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full pt-section-gap pb-stack-lg border-t border-outline/5">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter mb-section-gap">
+<div class="col-span-1 md:col-span-1">
+<span class="font-display-xl text-headline-md text-primary mb-stack-md block">AL-FITYA</span>
+<p class="font-body-md text-secondary mb-stack-lg">Empowering the global Muslim youth through the synthesis of faith and technology.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" data-icon="public">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" data-icon="hub">hub</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" data-icon="terminal">terminal</span>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-sm uppercase text-primary font-bold mb-stack-lg">Explore</h4>
+<ul class="space-y-stack-md">
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Our Story</a></li>
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Global Hubs</a></li>
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Volunteer</a></li>
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Donations</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-sm uppercase text-primary font-bold mb-stack-lg">Resources</h4>
+<ul class="space-y-stack-md">
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Support</a></li>
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Knowledge Base</a></li>
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Developer API</a></li>
+<li><a class="font-body-md text-secondary hover:text-primary transition-colors hover:translate-x-1 inline-block transform duration-200" href="#">Mobile App</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-sm uppercase text-primary font-bold mb-stack-lg">Newsletter</h4>
+<p class="font-body-md text-secondary mb-4">Stay updated with our latest missions and tech releases.</p>
+<div class="flex border-b border-primary py-2">
+<input class="bg-transparent border-none focus:ring-0 w-full text-primary placeholder:text-secondary/50 font-body-md" placeholder="Your email address" type="email"/>
+<button class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop border-t border-outline/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-on-tertiary-container text-sm">© 2024 AL-FITYA NGO. All Rights Reserved.</p>
+<div class="flex gap-8">
+<a class="font-body-md text-secondary hover:text-primary text-sm transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-secondary hover:text-primary text-sm transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-secondary hover:text-primary text-sm transition-colors" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll animation for navigation
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('shadow-sm');
+                nav.classList.add('h-16');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.remove('h-16');
+                nav.classList.add('h-20');
+            }
+        };
+
+        // Micro-interaction for hover effects on cards
+        document.querySelectorAll('.group').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                // Add any extra dynamic logic here if needed
+            });
+        });
+    </script>
+</body></html>

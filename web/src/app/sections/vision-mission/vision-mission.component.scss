@@ -1,0 +1,104 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.vm {
+  @include section-padding;
+  background: $color-surface-container-lowest;
+
+  &__inner {
+    @include container;
+    display: flex;
+    align-items: stretch;
+    gap: $space-8;
+
+    @include respond-below(md) {
+      flex-direction: column;
+      gap: $space-6;
+    }
+  }
+
+  &__card {
+    flex: 1;
+    text-align: center;
+    padding: $space-10 $space-8;
+    background: $color-background;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: border-color $transition-base;
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    @include respond-below(md) {
+      padding: $space-8 $space-6;
+    }
+  }
+
+  &__icon {
+    color: $text-primary;
+    margin-bottom: $space-6;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    font-family: $font-family-display;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $space-4;
+
+    @include respond-below(md) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-lg;
+    line-height: $line-height-relaxed;
+    color: $text-secondary;
+
+    @include respond-below(md) {
+      font-size: $font-size-base;
+    }
+  }
+
+  &__divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+    padding: $space-4 0;
+
+    @include respond-below(md) {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+
+  &__divider-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, $color-outline-variant, transparent);
+
+    @include respond-below(md) {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, $color-outline-variant, transparent);
+    }
+  }
+
+  &__divider-diamond {
+    width: 10px;
+    height: 10px;
+    background: $text-primary;
+    transform: rotate(45deg);
+    opacity: 0.3;
+    flex-shrink: 0;
+  }
+}

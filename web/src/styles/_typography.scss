@@ -1,0 +1,67 @@
+@use 'variables' as *;
+
+// ── Google Fonts Import ──────────────────────────────────────
+// Be Vietnam Pro (display/headings), Inter (body), JetBrains Mono (labels)
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ── Base typography ──────────────────────────────────────────
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family-body;
+  color: $text-primary;
+  line-height: $line-height-normal;
+}
+
+// ── Heading scales (Be Vietnam Pro) ─────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-display;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $text-primary;
+}
+
+h1 { font-size: $font-size-5xl; }
+h2 { font-size: $font-size-3xl; }
+h3 { font-size: $font-size-2xl; }
+h4 { font-size: $font-size-xl; }
+
+@include respond-below(md) {
+  h1 { font-size: $font-size-3xl; }
+  h2 { font-size: $font-size-2xl; }
+  h3 { font-size: $font-size-xl; }
+}
+
+// ── Founding verse ───────────────────────────────────────────
+.founding-verse {
+  font-family: $font-family-display;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-relaxed;
+  color: $text-primary;
+
+  @include respond-below(md) {
+    font-size: $font-size-2xl;
+  }
+}
+
+// ── Body text ────────────────────────────────────────────────
+p {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+  color: $text-secondary;
+
+  @include respond-below(md) {
+    font-size: $font-size-base;
+  }
+}
+
+// ── RTL paragraph alignment ──────────────────────────────────
+[dir="rtl"] .section-text {
+  text-align: justify;
+  text-justify: inter-word;
+}

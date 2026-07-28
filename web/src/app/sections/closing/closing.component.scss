@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+:host {
+  display: block;
+}
+
+.closing {
+  @include section-padding;
+  background: linear-gradient(160deg, #090909 0%, #1b1b1b 100%);
+  position: relative;
+
+  &__inner {
+    @include container;
+    max-width: 800px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-8;
+  }
+
+  &__khatam {
+    opacity: 0.3;
+    margin-bottom: $space-4;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__verse {
+    color: $color-white;
+    opacity: 0.9;
+  }
+
+  &__statement {
+    font-size: $font-size-lg;
+    color: $color-inverse-primary;
+    line-height: $line-height-relaxed;
+    max-width: 650px;
+
+    @include respond-below(md) {
+      font-size: $font-size-base;
+    }
+  }
+}

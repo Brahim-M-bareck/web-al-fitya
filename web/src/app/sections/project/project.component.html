@@ -1,0 +1,26 @@
+<section id="project" class="project khatam-bg">
+  <div class="project__inner">
+    <div class="project__header" appScrollReveal>
+      <h2 class="project__title">{{ 'project.title' | translate }}</h2>
+      <hr class="accent-divider">
+      <p class="project__teaser">{{ 'project.teaser' | translate }}</p>
+      <div class="project__badge">
+        <span class="project__badge-dot"></span>
+        {{ 'project.comingSoon' | translate }}
+      </div>
+    </div>
+
+    <div class="project__grid">
+      @for (feature of features; track feature.key; let i = $index) {
+        <div class="project__feature" appScrollReveal [style.transition-delay]="(i * 0.05) + 's'">
+          <div class="project__feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path [attr.d]="feature.icon"/>
+            </svg>
+          </div>
+          <span class="project__feature-text">{{ 'project.features.' + feature.key | translate }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

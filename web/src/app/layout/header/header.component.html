@@ -1,0 +1,60 @@
+<header class="header" [class.header--scrolled]="isScrolled()">
+  <div class="header__inner topbar-inner">
+    <a class="header__logo" href="#" (click)="scrollTo('hero', $event)" aria-label="Al-Fitya Home">
+      <img src="assets/images/Logo.png" alt="Al-Fitya Logo" width="36" height="36">
+    </a>
+
+    <nav class="header__nav" [class.header__nav--open]="mobileMenuOpen()" aria-label="Main navigation">
+      @for (section of navSections; track section.id) {
+        <a
+          class="header__nav-link"
+          [class.header__nav-link--active]="isActive(section.id)"
+          [attr.href]="'#' + section.id"
+          (click)="scrollTo(section.id, $event)">{{ section.key | translate }}</a>
+      }
+
+    </nav>
+
+    <div class="header__actions">
+      <div id="lang-switcher" class="header__lang-switcher">
+        <button
+          class="header__lang-trigger"
+          (click)="toggleLangDropdown()"
+          [attr.aria-expanded]="langDropdownOpen()"
+          [attr.aria-controls]="langMenuId"
+          aria-label="Select language">
+          <span class="material-symbols-outlined header__lang-icon" aria-hidden="true">language</span>
+        </button>
+        @if (langDropdownOpen()) {
+          <div
+            [id]="langMenuId"
+            class="header__lang-dropdown"
+            role="listbox"
+            aria-label="Language switcher">
+            @for (lang of languages; track lang.code) {
+              <button
+                class="header__lang-btn"
+                [class.header__lang-btn--active]="translate.currentLang() === lang.code"
+                (click)="setLang(lang.code)"
+                role="option"
+                [attr.aria-selected]="translate.currentLang() === lang.code">
+                {{ lang.label }}
+              </button>
+            }
+          </div>
+        }
+      </div>
+
+      <button
+        class="header__hamburger"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu">
+        <span class="header__hamburger-line" [class.header__hamburger-line--open]="mobileMenuOpen()"></span>
+        <span class="header__hamburger-line" [class.header__hamburger-line--open]="mobileMenuOpen()"></span>
+        <span class="header__hamburger-line" [class.header__hamburger-line--open]="mobileMenuOpen()"></span>
+      </button>
+    </div>
+  </div>
+</header>

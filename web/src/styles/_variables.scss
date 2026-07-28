@@ -1,0 +1,147 @@
+// ═══════════════════════════════════════════════════════════════
+// AL-FITYA Design Tokens — Monochromatic Theme (from design/)
+// ═══════════════════════════════════════════════════════════════
+
+// ── Colors ───────────────────────────────────────────────────
+// Material Design 3 monochromatic palette
+$color-primary: #000000;
+$color-on-primary: #f1f1f1;
+$color-primary-container: #1b1b1b;
+$color-on-primary-container: #848484;
+
+$color-secondary: #5f5e5e;
+$color-on-secondary: #ffffff;
+$color-secondary-container: #e5e2e1;
+$color-on-secondary-container: #656464;
+
+$color-surface: #f9f9f9;
+$color-on-surface: #1b1b1b;
+$color-on-surface-variant: #4c4546;
+$color-surface-dim: #dadada;
+$color-surface-bright: #f9f9f9;
+$color-surface-container-lowest: #ffffff;
+$color-surface-container-low: #f3f3f3;
+$color-surface-container: #eeeeee;
+$color-surface-container-high: #e8e8e8;
+$color-surface-container-highest: #e2e2e2;
+$color-surface-variant: #e2e2e2;
+$color-surface-tint: #5e5e5e;
+
+$color-outline: #7e7576;
+$color-outline-variant: #cfc4c5;
+
+$color-inverse-surface: #303030;
+$color-inverse-on-surface: #f1f1f1;
+$color-inverse-primary: #c6c6c6;
+
+$color-background: #F1F1F1;
+$color-on-background: #1b1b1b;
+
+$color-error: #ba1a1a;
+$color-on-error: #ffffff;
+$color-error-container: #ffdad6;
+$color-on-error-container: #93000a;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// ── Semantic tokens ──────────────────────────────────────────
+$primary: $color-primary;
+$primary-light: #474747;
+$primary-dark: $color-primary;
+$accent: $color-primary;
+$accent-light: #333333;
+$accent-dark: $color-primary;
+$surface-light: $color-surface-container-low;
+$surface-lighter: $color-background;
+$surface-dark: $color-on-surface;
+$surface-darker: $color-inverse-surface;
+$text-primary: $color-on-surface;
+$text-secondary: $color-on-surface-variant;
+$text-on-dark: $color-inverse-on-surface;
+$text-on-dark-muted: $color-inverse-primary;
+
+// ── Typography ───────────────────────────────────────────────
+// Display & Headings: Be Vietnam Pro
+$font-family-display: 'Be Vietnam Pro', sans-serif;
+// Body: Inter
+$font-family-body: 'Inter', sans-serif;
+// Labels & Mono: JetBrains Mono
+$font-family-mono: 'JetBrains Mono', monospace;
+
+// Legacy aliases (used in existing component SCSS)
+$font-family-arabic-display: $font-family-display;
+$font-family-arabic-body: $font-family-body;
+$font-family-latin-display: $font-family-display;
+$font-family-latin-body: $font-family-body;
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+$font-size-4xl: 2.25rem;
+$font-size-5xl: 3rem;
+$font-size-6xl: 3.75rem;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// ── Spacing ──────────────────────────────────────────────────
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-5: 1.25rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-10: 2.5rem;
+$space-12: 3rem;
+$space-16: 4rem;
+$space-20: 5rem;
+$space-24: 6rem;
+$space-32: 8rem;
+
+// ── Layout ───────────────────────────────────────────────────
+$container-max: 1280px;
+$container-padding: 64px;
+$gutter: 32px;
+$section-gap: 128px;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// ── Borders & Radius ─────────────────────────────────────────
+$radius-sm: 0.125rem;
+$radius-md: 0.25rem;
+$radius-lg: 0.375rem;
+$radius-xl: 0.5rem;
+$radius-2xl: 0.75rem;
+$radius-full: 9999px;
+
+// ── Shadows ──────────────────────────────────────────────────
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+// ── Transitions ──────────────────────────────────────────────
+$transition-fast: 150ms ease;
+$transition-base: 300ms ease;
+$transition-slow: 500ms ease;
+
+// ── Z-index ──────────────────────────────────────────────────
+$z-header: 100;
+$z-overlay: 200;
+$z-modal: 300;

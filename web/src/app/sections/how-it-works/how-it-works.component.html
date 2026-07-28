@@ -1,0 +1,21 @@
+<section id="how-it-works" class="hiw khatam-bg">
+  <div class="hiw__inner">
+    <h2 class="hiw__title" appScrollReveal>{{ 'howItWorks.title' | translate }}</h2>
+    <hr class="accent-divider" appScrollReveal>
+
+    <div class="hiw__grid">
+      @for (step of steps; track step.key; let i = $index) {
+        <div class="hiw__step" [class]="'hiw__step--' + step.key" appScrollReveal [style.transition-delay]="(i * 0.1) + 's'">
+          <div class="hiw__step-number" aria-hidden="true">{{ i + 1 }}</div>
+          <div class="hiw__step-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path [attr.d]="step.icon"/>
+            </svg>
+          </div>
+          <h3 class="hiw__step-title">{{ 'howItWorks.steps.' + step.key + '.title' | translate }}</h3>
+          <p class="hiw__step-desc">{{ 'howItWorks.steps.' + step.key + '.description' | translate }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<section id="hero" class="hero khatam-bg">
+  <div class="hero__bg" aria-hidden="true">
+    <img src="assets/images/mosque.jpg" alt="" class="hero__bg-img">
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="hero__inner">
+    <div class="hero__content" appScrollReveal>
+      <p class="hero__verse founding-verse">{{ 'hero.verse' | translate }}</p>
+      <p class="hero__tagline">{{ 'hero.tagline' | translate }}</p>
+      <a class="hero__cta" href="#about" (click)="scrollToAbout($event)">
+        {{ 'hero.cta' | translate }}
+        <svg class="hero__cta-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

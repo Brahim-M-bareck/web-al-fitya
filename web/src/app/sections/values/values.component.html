@@ -1,0 +1,15 @@
+<section id="values" class="values khatam-bg">
+  <div class="values__inner">
+    <h2 class="values__title" appScrollReveal>{{ 'values.title' | translate }}</h2>
+    <hr class="accent-divider" appScrollReveal>
+
+    <div class="values__grid">
+      @for (value of values; track value.key; let i = $index) {
+        <div class="values__badge" appScrollReveal [style.transition-delay]="(i * 0.05) + 's'">
+          <span class="values__badge-dot" aria-hidden="true"></span>
+          {{ 'values.items.' + value.key | translate }}
+        </div>
+      }
+    </div>
+  </div>
+</section>
