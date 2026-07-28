@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- 8-pointed star khatam motif for repeating pattern -->
+  <g opacity="1">
+    <!-- Star formed by two overlapping squares -->
+    <rect x="30" y="30" width="60" height="60" rx="1"
+          stroke="#c9a96e" stroke-width="0.8" fill="none"
+          transform="rotate(0 60 60)"/>
+    <rect x="30" y="30" width="60" height="60" rx="1"
+          stroke="#c9a96e" stroke-width="0.8" fill="none"
+          transform="rotate(45 60 60)"/>
+    <!-- Inner star -->
+    <polygon points="60,35 72,48 85,48 75,58 78,72 60,64 42,72 45,58 35,48 48,48"
+             stroke="#c9a96e" stroke-width="0.5" fill="none"/>
+    <!-- Center circle -->
+    <circle cx="60" cy="60" r="3" fill="#c9a96e" opacity="0.4"/>
+  </g>
+</svg>

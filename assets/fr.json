@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "visionMission": "Vision & Mission",
+    "howItWorks": "Comment ça marche",
+    "domains": "Nos domaines",
+    "project": "Le projet",
+    "values": "Nos valeurs",
+    "contact": "Contact"
+  },
+  "hero": {
+    "verse": "﴿فِتْيَةٌ آمَنُوا بِرَبِّهِمْ فَزِدْنَاهُمْ هُدًى﴾",
+    "tagline": "Al-Fitya est une initiative youth qui vise à former une génération engagée, alliant foi, savoir, discipline et travail d'équipe.",
+    "cta": "Découvrir"
+  },
+  "about": {
+    "title": "À propos",
+    "content": "Al-Fitya est une initiative youth qui vise à former une génération engagée, alliant foi, savoir, discipline et travail d'équipe. Son principe fondamental est que l'on progresse et l'on persiste lorsqu'on est entouré de compagnons bienveillants, unis pour le bien, qui encouragent l'accomplissement et suivent les progrès. Al-Fitya ne repose pas sur la compétition pour surpasser les autres, mais sur la coopération pour s'élever soi-même, se rendre des comptes et avancer ensemble vers des objectifs bénéfiques dans la foi comme dans la vie."
+  },
+  "vision": {
+    "title": "Notre vision",
+    "content": "Faire d'Al-Fitya une communauté qui contribue à former des jeunes animés de grandes ambitions, alliant droiture religieuse, noble moralité, quête du savoir et excellence dans les différents domaines de la vie."
+  },
+  "mission": {
+    "title": "Notre mission",
+    "content": "Créer un environnement pratique qui aide les jeunes à s'engager, à persévérer, à partager leurs expériences et à transformer leurs ambitions en actions et en plans réalisables, grâce au suivi quotidien et au travail d'équipe."
+  },
+  "howItWorks": {
+    "title": "Comment fonctionne Al-Fitya",
+    "steps": {
+      "groups": {
+        "title": "Petits groupes",
+        "description": "Al-Fitya s'appuie sur de petits groupes, chacun dirigé par un chef qui suit les membres et définit les programmes et les tâches."
+      },
+      "leadership": {
+        "title": "Encadrement",
+        "description": "Le chef de groupe accompagne les membres, définit les programmes et les tâches, et veille à l'engagement de chacun."
+      },
+      "tracking": {
+        "title": "Suivi quotidien",
+        "description": "Enregistrement des réalisations au jour le jour et chaque semaine, mesure de l'engagement et des progrès de chaque membre."
+      },
+      "voting": {
+        "title": "Participation collective",
+        "description": "Certains programmes et cours sont choisis par vote parmi les membres, afin que chacun participe à l'élaboration des objectifs du groupe."
+      }
+    }
+  },
+  "domains": {
+    "title": "Nos domaines",
+    "items": {
+      "quran": "Coran — mémorisation, révision et méditation",
+      "dailyHabits": "Habitudes quotidiennes — construire la discipline",
+      "islamicStudies": "Étude des sciences islamiques",
+      "arabicLanguage": "Langue arabe et poésie",
+      "selfDevelopment": "Développement personnel",
+      "languages": "Apprentissage des langues",
+      "programming": "Programmation et compétences numériques",
+      "sports": "Sport et santé"
+    }
+  },
+  "project": {
+    "title": "Le projet Al-Fitya",
+    "teaser": "L'initiative développe un site web et une application portant le nom d'Al-Fitya, destinés à devenir une plateforme complète pour aider les membres à atteindre leurs objectifs.",
+    "features": {
+      "taskTracking": "Suivi des tâches quotidiennes et hebdomadaires",
+      "groupCreation": "Création de groupes encadrés par un superviseur définissant les tâches",
+      "motivationScore": "Calcul du niveau de motivation et de discipline",
+      "progressStats": "Suivi des réalisations et des statistiques",
+      "votingSystem": "Système de vote pour les programmes et les cours",
+      "quranReader": "Coran intégré pour faciliter la mémorisation et la révision",
+      "progressDashboard": "Tableau de bord de progression pour chaque membre et chaque groupe"
+    }
+  },
+  "values": {
+    "title": "Nos valeurs",
+    "items": {
+      "sincerity": "Sincérité",
+      "commitment": "Engagement",
+      "honesty": "Honnêteté",
+      "discipline": "Discipline",
+      "cooperation": "Coopération",
+      "seekingKnowledge": "Quête du savoir",
+      "perseverance": "Persévérance",
+      "ambition": "Ambition"
+    }
+  },
+  "closing": {
+    "verse": "﴿فِتْيَةٌ آمَنُوا بِرَبِّهِمْ فَزِدْنَاهُمْ هُدًى﴾",
+    "statement": "Nous croyons que le changement réel commence par l'individu, se renforce par la compagnie des vertueux et se maintient par un travail régulier, et que les plus grandes réalisations se construisent par des petits pas constants."
+  },
+  "footer": {
+    "copyright": "© 2025 Al-Fitya — Tous droits réservés",
+    "email": "info@alfitya.org",
+    "socialPlaceholder": "Suivez-nous sur les réseaux sociaux"
+  },
+  "meta": {
+    "title": "Al-Fitya — Initiative youth pour l'engagement et l'excellence",
+    "description": "Al-Fitya est une initiative youth qui vise à former une génération engagée, alliant foi, savoir, discipline et travail d'équipe."
+  }
+}
