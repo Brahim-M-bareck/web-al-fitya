@@ -49,7 +49,7 @@ export class TranslateService {
   }
 
   private loadTranslations(lang: SupportedLang): void {
-    fetch(`/assets/i18n/${lang}.json`)
+    fetch(`assets/i18n/${lang}.json`)
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to load ${lang}.json`);
         return res.json();
