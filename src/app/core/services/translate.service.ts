@@ -1,6 +1,7 @@
 import { Injectable, signal, computed, effect, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import type { TranslationData } from '../models/translation-keys.model';
+import arData from '../../../assets/i18n/ar.json';
 
 export type SupportedLang = 'ar' | 'fr' | 'en';
 
@@ -15,7 +16,7 @@ export class TranslateService {
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
   private readonly translations = signal<Record<SupportedLang, TranslationData>>({
-    ar: {} as TranslationData,
+    ar: arData as TranslationData,
     fr: {} as TranslationData,
     en: {} as TranslationData,
   });
@@ -33,18 +34,18 @@ export class TranslateService {
       });
     }
 
-    this.loadTranslations(this.currentLang());
+    const initial = this.currentLang();
+    if (initial !== 'ar') {
+      this.loadTranslations(initial);
+    }
   }
 
   private getInitialLang(): SupportedLang {
     if (!this.isBrowser) return DEFAULT_LANG;
-
     const stored = localStorage.getItem(STORAGE_KEY) as SupportedLang | null;
     if (stored && ['ar', 'fr', 'en'].includes(stored)) return stored;
-
     const browserLang = navigator.language.slice(0, 2);
     if (['ar', 'fr', 'en'].includes(browserLang)) return browserLang as SupportedLang;
-
     return DEFAULT_LANG;
   }
 
@@ -64,7 +65,8 @@ export class TranslateService {
     if (lang === this.currentLang()) return;
     this.currentLang.set(lang);
 
-    if (!this.translations()[lang] || Object.keys(this.translations()[lang]).length === 0) {
+    const data = this.translations()[lang];
+    if (!data || Object.keys(data).length === 0) {
       this.loadTranslations(lang);
     }
   }
