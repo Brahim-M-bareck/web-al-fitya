@@ -44,8 +44,6 @@ export class TranslateService {
     if (!this.isBrowser) return DEFAULT_LANG;
     const stored = localStorage.getItem(STORAGE_KEY) as SupportedLang | null;
     if (stored && ['ar', 'fr', 'en'].includes(stored)) return stored;
-    const browserLang = navigator.language.slice(0, 2);
-    if (['ar', 'fr', 'en'].includes(browserLang)) return browserLang as SupportedLang;
     return DEFAULT_LANG;
   }
 
